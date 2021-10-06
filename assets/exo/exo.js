@@ -9,13 +9,6 @@ const arr = [6, 2, 3, -4, 54, 6, 7, 888, 99, 10, 1, 800, 500, -400, 1000];
 
 //cas concret => on va avoir (6 - 0 = 6) < (0 - 0 = 0) = 6 puis
 //(2 - 0) < (6 - 0 ) = 2 puis (3 -0 ) = 3 < (2 - 0) = 2 etc...
-const result = arr.reduce((previousValue, currentValue) =>
-  Math.abs(currentValue - referenceValue) <
-  Math.abs(previousValue - referenceValue)
-    ? currentValue
-    : previousValue
-);
-
 //donc la fonction =>
 
 const findNearestNumber = arr => {
