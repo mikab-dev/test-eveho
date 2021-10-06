@@ -15,3 +15,19 @@ const result = arr.reduce((previousValue, currentValue) =>
     ? currentValue
     : previousValue
 );
+
+//donc la fonction =>
+
+const findNearestNumber = arr => {
+  if (arr.length) {
+    const result = arr.reduce((previousValue, currentValue) =>
+      Math.abs(currentValue - referenceValue) <
+      Math.abs(previousValue - referenceValue)
+        ? currentValue
+        : previousValue
+    );
+    return result;
+  } else {
+    return 0;
+  }
+};
